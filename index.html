@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>GitHub Static Page Hosting Test!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/qrcode.js"></script>
+  </head>
+  <body>
+    <div class="Form">
+      <div class="Form-Item">
+        <input type="text" id="tenantId" class="Form-Item-Input" placeholder="Tenant ID" onInput="makeCode()">
+      </div>
+      <div class="Form-Item">
+        <input type="text" id="loginId" class="Form-Item-Input" placeholder="Login ID" onInput="makeCode()">
+      </div>
+      <div class="Form-Item">
+        <input type="text" id="password" class="Form-Item-Input" placeholder="Password" onInput="makeCode()">
+      </div>
+      <div id="qrcode" style="width:200px; height:200px; margin-top:15px;"></div>
+    </div>
+
+    <script type="text/javascript">
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width : 200,
+        height : 200
+      });
+      
+      function makeCode() {		
+        var tenantId = document.getElementById("tenantId");
+        var loginId = document.getElementById("loginId");
+        var password = document.getElementById("password");
+        var string = tenantId.value + '\n' + loginId.value + '\n' + password.value
+        qrcode.makeCode(string);
+      }
+    </script>
+  </body>
+</html>
