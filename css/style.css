@@ -10,8 +10,8 @@
   }
 }
 .Form-Item {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -28,7 +28,6 @@
 .Form-Item-Input {
   border: 1px solid #ddd;
   border-radius: 6px;
-  margin-left: 40px;
   padding-left: 1em;
   padding-right: 1em;
   height: 48px;
@@ -45,5 +44,15 @@
     height: 40px;
     flex: inherit;
     font-size: 15px;
+  }
+}
+.QRCode {
+  padding-top: 24px;
+  width: 300px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 480px) {
+  .QRCode {
+    width: 100%;
   }
 }

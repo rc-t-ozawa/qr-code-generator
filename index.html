@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <title>GitHub Static Page Hosting Test!</title>
+    <title>QR code generator for MiiTel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/qrcode.js"></script>
@@ -18,13 +18,15 @@
       <div class="Form-Item">
         <input type="text" id="password" class="Form-Item-Input" placeholder="Password" onInput="makeCode()">
       </div>
-      <div id="qrcode" style="width:200px; height:200px; margin-top:15px;"></div>
+      <div class="QRCode">
+        <div id="qrcode"></div>
+      </div>
     </div>
 
     <script type="text/javascript">
       var qrcode = new QRCode(document.getElementById("qrcode"), {
-        width : 200,
-        height : 200
+        width : 300,
+        height : 300
       });
       
       function makeCode() {		
